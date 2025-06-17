@@ -6,6 +6,8 @@ function Habilidades (){
             <li>Habilidad1</li>
             <li>Habilidad2</li>
             <li>Habilidad3</li>
+            <li>Habilidad2</li>
+            <li>Habilidad3</li>
         </ul>
     </>
     );
