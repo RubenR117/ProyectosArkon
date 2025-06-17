@@ -1,0 +1,9 @@
+body {
+  color: white;
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #242424;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
