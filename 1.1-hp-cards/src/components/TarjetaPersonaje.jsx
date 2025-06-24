@@ -12,7 +12,7 @@ export default function TarjetaPersonaje({ character, onViewMore }) {
   <h3>{character.name}</h3>
   <p>Casa: {character.house || 'Desconocida'}</p>
   <div className="my-2 flex justify-center">
-    <button onClick={() => onViewMore(character)} className="bg-green-800 text-amber-50 py-1 px-2 rounded-md">Ver más</button>
+    <button onClick={() => onViewMore(character)} className="bg-green-800 text-amber-50 py-1 px-2 rounded-md hover:bg-green-600 hover:scale-110">Ver más</button>
   </div>
 </div>
 );

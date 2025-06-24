@@ -19,7 +19,7 @@ export default function DetallesPersonaje({ character, onClose }) {
           <p><strong>Casa:</strong> {character.house || 'Desconocida'}</p>
           <p><strong>Actor:</strong> {character.actor}</p>
           <p><strong>Vive?:</strong> {character.alive ? 'Simon' : 'Nel :('}</p>
-          <button className="close-button bg-green-800 text-amber-50 py-1 px-2 rounded-md" onClick={onClose}>Cerrar</button>
+          <button className="close-button bg-green-800 text-amber-50 py-1 px-2 rounded- hover:bg-green-600 hover:scale-110" onClick={onClose}>Cerrar</button>
         </>
       )}
     </div>
