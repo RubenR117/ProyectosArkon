@@ -7,16 +7,12 @@ import DetallesPersonaje from './components/DetallesPersonaje';
 
 import AppContext from './context/AppContext';
 
-import useCharacters from './hooks/useCharacter'; // El custom hook con useQuery
+import useCharacters from './hooks/useCharacter'; // El custom hook
 
 //Componente App
 const App = () => {
   const { data: characters = [], isLoading, error } = useCharacters(); // ya no se usa useEffect ni axiosInstance
-  // const [house, setHouse] = useState('');
-  // const [selectedCharacter, setSelectedCharacter] = useState(null);
 const { house, setHouse, selectedCharacter, setSelectedCharacter} = useContext(AppContext);//Aquí se usa el contexto
-
-console.log("contexto:", house, selectedCharacter);
   // Obtener casas únicas de forma segura
   const houses = useMemo(() => {
     const unique = [...new Set(characters.map(c => c.house).filter(Boolean))];
