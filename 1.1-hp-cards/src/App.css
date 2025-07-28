@@ -12,3 +12,7 @@
   padding: 20px;
   color: black;
 }
+
+.sidebar.open {
+  transform: translateX(0);
+}
