@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://potterhead-api.vercel.app/api",
+  baseURL: "http://localhost:3001/api",
   timeout: 5000, //5s
 });
 

@@ -1,9 +1,9 @@
 import '../App.css';
 
 //COMPONENTE
-export default function DetallesPersonaje({ character, onClose }) {
+export default function DetallesPersonaje({ character, onClose, likes, onLike}) {
   return (
-    <div className={`sidebar ${character ? 'open' : ''}`}>
+    <div className={`sidebar ${character ? 'open' : ''} space-x-4 space-y-1`}>
       {character && (
         <>
           {character.image && (
@@ -20,6 +20,7 @@ export default function DetallesPersonaje({ character, onClose }) {
           <p><strong>Actor:</strong> {character.actor}</p>
           <p><strong>Vive?:</strong> {character.alive ? 'Simon' : 'Nel :('}</p>
           <button className="close-button bg-green-800 text-amber-50 py-1 px-2 rounded- hover:bg-green-600 hover:scale-110" onClick={onClose}>Cerrar</button>
+          <button onClick={() => onLike(character.name)} className="bg-green-800 text-amber-50 py-1 px-2 rounded-md hover:bg-green-600 hover:scale-110">🥵 {likes}</button>
         </>
       )}
     </div>
