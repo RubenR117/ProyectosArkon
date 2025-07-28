@@ -1,13 +1,16 @@
-import { useState } from 'react';
-import AppContext from './AppContext';
+import { createContext, useReducer } from 'react';
+import { appReducer, initialState } from './Reducer';
 
-export default function AppProvider({ children }) {
-  const [selectedCharacter, setSelectedCharacter] = useState(null);
-  const [house, setHouse] = useState('');
+export const AppContext = createContext();
+
+export const AppProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(appReducer, initialState);
 
   return (
-    <AppContext.Provider value={{ selectedCharacter, setSelectedCharacter, house, setHouse }}>
+    <AppContext.Provider value={{ state, dispatch }}>
       {children}
     </AppContext.Provider>
   );
-}
+};
+
+export default AppProvider;
